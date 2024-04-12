@@ -233,7 +233,7 @@ implements <a href="../quantilescommon/QuantilesAPI.html" title="interface in or
 <!--   -->
 </a>
 <h3>Fields inherited from interface&nbsp;org.apache.datasketches.quantilescommon.<a href="../quantilescommon/QuantilesAPI.html" title="interface in org.apache.datasketches.quantilescommon">QuantilesAPI</a></h3>
-<code><a href="../quantilescommon/QuantilesAPI.html#EMPTY_MSG">EMPTY_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#MEM_REQ_SVR_NULL_MSG">MEM_REQ_SVR_NULL_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#NOT_SINGLE_ITEM_MSG">NOT_SINGLE_ITEM_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#TGT_IS_READ_ONLY_MSG">TGT_IS_READ_ONLY_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#UNSUPPORTED_MSG">UNSUPPORTED_MSG</a></code></li>
+<code><a href="../quantilescommon/QuantilesAPI.html#EMPTY_MSG">EMPTY_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#MEM_REQ_SVR_NULL_MSG">MEM_REQ_SVR_NULL_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#NOT_SINGLE_ITEM_MSG">NOT_SINGLE_ITEM_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#SELF_MERGE_MSG">SELF_MERGE_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#TGT_IS_READ_ONLY_MSG">TGT_IS_READ_ONLY_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#UNSUPPORTED_MSG">UNSUPPORTED_MSG</a></code></li>
 </ul>
 </li>
 </ul>
@@ -373,7 +373,7 @@ implements <a href="../quantilescommon/QuantilesAPI.html" title="interface in or
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString(boolean,boolean)">toString</a></span>&#8203;(boolean&nbsp;withLevels,
         boolean&nbsp;withLevelsAndItems)</code></th>
 <td class="colLast">
-<div class="block">Returns a summary of the sketch as a string.</div>
+<div class="block">Returns human readable summary information about this sketch.</div>
 </td>
 </tr>
 </table>
@@ -518,10 +518,13 @@ implements <a href="../quantilescommon/QuantilesAPI.html" title="interface in or
 <li class="blockList">
 <h4>getNormalizedRankError</h4>
 <pre class="methodSignature">public final&nbsp;double&nbsp;getNormalizedRankError&#8203;(boolean&nbsp;pmf)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../quantilescommon/QuantilesAPI.html#getNormalizedRankError(boolean)">QuantilesAPI</a></code></span></div>
 <div class="block">Gets the approximate rank error of this sketch normalized as a fraction between zero and one.
  The epsilon returned is a best fit to 99 percent confidence empirically measured max error
  in thousands of trials.</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../quantilescommon/QuantilesAPI.html#getNormalizedRankError(boolean)">getNormalizedRankError</a></code>&nbsp;in interface&nbsp;<code><a href="../quantilescommon/QuantilesAPI.html" title="interface in org.apache.datasketches.quantilescommon">QuantilesAPI</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>pmf</code> - if true, returns the "double-sided" normalized rank error for the getPMF() function.
  Otherwise, it is the "single-sided" normalized rank error for all the other queries.</dd>
@@ -731,13 +734,14 @@ implements <a href="../quantilescommon/QuantilesAPI.html" title="interface in or
 <h4>toString</h4>
 <pre class="methodSignature">public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;toString&#8203;(boolean&nbsp;withLevels,
                                 boolean&nbsp;withLevelsAndItems)</pre>
-<div class="block">Returns a summary of the sketch as a string.</div>
+<div class="block">Returns human readable summary information about this sketch.
+ Used for debugging.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>withLevels</code> - if true includes sketch levels array summary information</dd>
 <dd><code>withLevelsAndItems</code> - if true include detail of levels array and items array together</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>string representation of sketch summary</dd>
+<dd>human readable summary information about this sketch.</dd>
 </dl>
 </li>
 </ul>

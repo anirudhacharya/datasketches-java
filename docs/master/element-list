@@ -2,6 +2,8 @@ org.apache.datasketches
 org.apache.datasketches.common
 org.apache.datasketches.cpc
 org.apache.datasketches.fdt
+org.apache.datasketches.filters
+org.apache.datasketches.filters.bloomfilter
 org.apache.datasketches.frequencies
 org.apache.datasketches.hash
 org.apache.datasketches.hll
@@ -12,6 +14,7 @@ org.apache.datasketches.quantiles
 org.apache.datasketches.quantilescommon
 org.apache.datasketches.req
 org.apache.datasketches.sampling
+org.apache.datasketches.tdigest
 org.apache.datasketches.theta
 org.apache.datasketches.thetacommon
 org.apache.datasketches.tuple

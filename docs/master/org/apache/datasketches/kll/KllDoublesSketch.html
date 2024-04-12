@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":9,"i12":10,"i13":10,"i14":9,"i15":9,"i16":9,"i17":9,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":9,"i24":9};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":9,"i12":10,"i13":10,"i14":9,"i15":9,"i16":9,"i17":9,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":9,"i25":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -191,7 +191,7 @@ implements <a href="../quantilescommon/QuantilesDoublesAPI.html" title="interfac
 <!--   -->
 </a>
 <h3>Fields inherited from interface&nbsp;org.apache.datasketches.quantilescommon.<a href="../quantilescommon/QuantilesAPI.html" title="interface in org.apache.datasketches.quantilescommon">QuantilesAPI</a></h3>
-<code><a href="../quantilescommon/QuantilesAPI.html#EMPTY_MSG">EMPTY_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#MEM_REQ_SVR_NULL_MSG">MEM_REQ_SVR_NULL_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#NOT_SINGLE_ITEM_MSG">NOT_SINGLE_ITEM_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#TGT_IS_READ_ONLY_MSG">TGT_IS_READ_ONLY_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#UNSUPPORTED_MSG">UNSUPPORTED_MSG</a></code></li>
+<code><a href="../quantilescommon/QuantilesAPI.html#EMPTY_MSG">EMPTY_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#MEM_REQ_SVR_NULL_MSG">MEM_REQ_SVR_NULL_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#NOT_SINGLE_ITEM_MSG">NOT_SINGLE_ITEM_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#SELF_MERGE_MSG">SELF_MERGE_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#TGT_IS_READ_ONLY_MSG">TGT_IS_READ_ONLY_MSG</a>, <a href="../quantilescommon/QuantilesAPI.html#UNSUPPORTED_MSG">UNSUPPORTED_MSG</a></code></li>
 </ul>
 </li>
 </ul>
@@ -296,7 +296,7 @@ implements <a href="../quantilescommon/QuantilesDoublesAPI.html" title="interfac
 </td>
 </tr>
 <tr id="i10" class="altColor">
-<td class="colFirst"><code><a href="../quantilescommon/DoublesSortedView.html" title="interface in org.apache.datasketches.quantilescommon">DoublesSortedView</a></code></td>
+<td class="colFirst"><code><a href="../quantilescommon/DoublesSketchSortedView.html" title="class in org.apache.datasketches.quantilescommon">DoublesSketchSortedView</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSortedView()">getSortedView</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Gets the sorted view of this sketch</div>
@@ -373,7 +373,7 @@ implements <a href="../quantilescommon/QuantilesDoublesAPI.html" title="interfac
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString(boolean,boolean)">toString</a></span>&#8203;(boolean&nbsp;withLevels,
         boolean&nbsp;withLevelsAndItems)</code></th>
 <td class="colLast">
-<div class="block">Returns a summary of the sketch as a string.</div>
+<div class="block">Returns human readable summary information about this sketch.</div>
 </td>
 </tr>
 <tr id="i21" class="rowColor">
@@ -385,13 +385,22 @@ implements <a href="../quantilescommon/QuantilesDoublesAPI.html" title="interfac
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#update(double%5B%5D,int,int)">update</a></span>&#8203;(double[]&nbsp;items,
+      int&nbsp;offset,
+      int&nbsp;length)</code></th>
+<td class="colLast">
+<div class="block">Vector update.</div>
+</td>
+</tr>
+<tr id="i23" class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#update(double,long)">update</a></span>&#8203;(double&nbsp;item,
       long&nbsp;weight)</code></th>
 <td class="colLast">
 <div class="block">Weighted update.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>static <a href="KllDoublesSketch.html" title="class in org.apache.datasketches.kll">KllDoublesSketch</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#wrap(org.apache.datasketches.memory.Memory)">wrap</a></span>&#8203;(org.apache.datasketches.memory.Memory&nbsp;srcMem)</code></th>
 <td class="colLast">
@@ -399,7 +408,7 @@ implements <a href="../quantilescommon/QuantilesDoublesAPI.html" title="interfac
  that originated from this sketch.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>static <a href="KllDoublesSketch.html" title="class in org.apache.datasketches.kll">KllDoublesSketch</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writableWrap(org.apache.datasketches.memory.WritableMemory,org.apache.datasketches.memory.MemoryRequestServer)">writableWrap</a></span>&#8203;(org.apache.datasketches.memory.WritableMemory&nbsp;srcMem,
             org.apache.datasketches.memory.MemoryRequestServer&nbsp;memReqSvr)</code></th>
@@ -428,7 +437,7 @@ implements <a href="../quantilescommon/QuantilesDoublesAPI.html" title="interfac
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;org.apache.datasketches.quantilescommon.<a href="../quantilescommon/QuantilesAPI.html" title="interface in org.apache.datasketches.quantilescommon">QuantilesAPI</a></h3>
-<code><a href="../quantilescommon/QuantilesAPI.html#getK()">getK</a>, <a href="../quantilescommon/QuantilesAPI.html#getN()">getN</a>, <a href="../quantilescommon/QuantilesAPI.html#getNumRetained()">getNumRetained</a>, <a href="../quantilescommon/QuantilesAPI.html#hasMemory()">hasMemory</a>, <a href="../quantilescommon/QuantilesAPI.html#isDirect()">isDirect</a>, <a href="../quantilescommon/QuantilesAPI.html#isEmpty()">isEmpty</a>, <a href="../quantilescommon/QuantilesAPI.html#isEstimationMode()">isEstimationMode</a>, <a href="../quantilescommon/QuantilesAPI.html#isReadOnly()">isReadOnly</a>, <a href="../quantilescommon/QuantilesAPI.html#toString()">toString</a></code></li>
+<code><a href="../quantilescommon/QuantilesAPI.html#getK()">getK</a>, <a href="../quantilescommon/QuantilesAPI.html#getN()">getN</a>, <a href="../quantilescommon/QuantilesAPI.html#getNormalizedRankError(boolean)">getNormalizedRankError</a>, <a href="../quantilescommon/QuantilesAPI.html#getNumRetained()">getNumRetained</a>, <a href="../quantilescommon/QuantilesAPI.html#hasMemory()">hasMemory</a>, <a href="../quantilescommon/QuantilesAPI.html#isDirect()">isDirect</a>, <a href="../quantilescommon/QuantilesAPI.html#isEmpty()">isEmpty</a>, <a href="../quantilescommon/QuantilesAPI.html#isEstimationMode()">isEstimationMode</a>, <a href="../quantilescommon/QuantilesAPI.html#isReadOnly()">isReadOnly</a>, <a href="../quantilescommon/QuantilesAPI.html#toString()">toString</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.org.apache.datasketches.quantilescommon.QuantilesDoublesAPI">
@@ -875,23 +884,6 @@ implements <a href="../quantilescommon/QuantilesDoublesAPI.html" title="interfac
 </dl>
 </li>
 </ul>
-<a id="getSortedView()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getSortedView</h4>
-<pre class="methodSignature">public&nbsp;<a href="../quantilescommon/DoublesSortedView.html" title="interface in org.apache.datasketches.quantilescommon">DoublesSortedView</a>&nbsp;getSortedView()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../quantilescommon/QuantilesDoublesAPI.html#getSortedView()">QuantilesDoublesAPI</a></code></span></div>
-<div class="block">Gets the sorted view of this sketch</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../quantilescommon/QuantilesDoublesAPI.html#getSortedView()">getSortedView</a></code>&nbsp;in interface&nbsp;<code><a href="../quantilescommon/QuantilesDoublesAPI.html" title="interface in org.apache.datasketches.quantilescommon">QuantilesDoublesAPI</a></code></dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the sorted view of this sketch</dd>
-</dl>
-</li>
-</ul>
 <a id="iterator()">
 <!--   -->
 </a>
@@ -971,7 +963,8 @@ implements <a href="../quantilescommon/QuantilesDoublesAPI.html" title="interfac
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;toString&#8203;(boolean&nbsp;withLevels,
                        boolean&nbsp;withLevelsAndItems)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="KllSketch.html#toString(boolean,boolean)">KllSketch</a></code></span></div>
-<div class="block">Returns a summary of the sketch as a string.</div>
+<div class="block">Returns human readable summary information about this sketch.
+ Used for debugging.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="KllSketch.html#toString(boolean,boolean)">toString</a></code>&nbsp;in class&nbsp;<code><a href="KllSketch.html" title="class in org.apache.datasketches.kll">KllSketch</a></code></dd>
@@ -979,7 +972,7 @@ implements <a href="../quantilescommon/QuantilesDoublesAPI.html" title="interfac
 <dd><code>withLevels</code> - if true includes sketch levels array summary information</dd>
 <dd><code>withLevelsAndItems</code> - if true include detail of levels array and items array together</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>string representation of sketch summary</dd>
+<dd>human readable summary information about this sketch.</dd>
 </dl>
 </li>
 </ul>
@@ -1003,7 +996,7 @@ implements <a href="../quantilescommon/QuantilesDoublesAPI.html" title="interfac
 <a id="update(double,long)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>update</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;update&#8203;(double&nbsp;item,
@@ -1013,6 +1006,42 @@ implements <a href="../quantilescommon/QuantilesDoublesAPI.html" title="interfac
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>item</code> - the item to be repeated. NaNs are ignored.</dd>
 <dd><code>weight</code> - the number of times the update of item is to be repeated. It must be &ge; one.</dd>
+</dl>
+</li>
+</ul>
+<a id="update(double[],int,int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>update</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;update&#8203;(double[]&nbsp;items,
+                   int&nbsp;offset,
+                   int&nbsp;length)</pre>
+<div class="block">Vector update. Updates this sketch with the given array (vector) of items, starting at the items
+ offset for a length number of items. This is not supported for direct sketches.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>items</code> - the vector of items</dd>
+<dd><code>offset</code> - the starting index of the items[] array</dd>
+<dd><code>length</code> - the number of items</dd>
+</dl>
+</li>
+</ul>
+<a id="getSortedView()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getSortedView</h4>
+<pre class="methodSignature">public&nbsp;<a href="../quantilescommon/DoublesSketchSortedView.html" title="class in org.apache.datasketches.quantilescommon">DoublesSketchSortedView</a>&nbsp;getSortedView()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../quantilescommon/QuantilesDoublesAPI.html#getSortedView()">QuantilesDoublesAPI</a></code></span></div>
+<div class="block">Gets the sorted view of this sketch</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../quantilescommon/QuantilesDoublesAPI.html#getSortedView()">getSortedView</a></code>&nbsp;in interface&nbsp;<code><a href="../quantilescommon/QuantilesDoublesAPI.html" title="interface in org.apache.datasketches.quantilescommon">QuantilesDoublesAPI</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the sorted view of this sketch</dd>
 </dl>
 </li>
 </ul>

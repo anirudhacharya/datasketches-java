@@ -186,60 +186,66 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 </td>
 </tr>
 <tr class="altColor">
+<th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#BLOOMFILTER">BLOOMFILTER</a></span></code></th>
+<td class="colLast">
+<div class="block">Bloom Filter</div>
+</td>
+</tr>
+<tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#COMPACT">COMPACT</a></span></code></th>
 <td class="colLast">
 <div class="block">The Compact Sketch family is a member of the Theta Sketch Framework of sketches.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#COUNTMIN">COUNTMIN</a></span></code></th>
 <td class="colLast">
 <div class="block">CountMin Sketch</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#CPC">CPC</a></span></code></th>
 <td class="colLast">
 <div class="block">Compressed Probabilistic Counting (CPC) Sketch</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#EBPPS">EBPPS</a></span></code></th>
 <td class="colLast">
 <div class="block">Exact and Bounded, Probability Proportional to Size (EBPPS)</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#FREQUENCY">FREQUENCY</a></span></code></th>
 <td class="colLast">
 <div class="block">The Frequency family of sketches.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#HLL">HLL</a></span></code></th>
 <td class="colLast">
 <div class="block">The HLL family of sketches.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#INTERSECTION">INTERSECTION</a></span></code></th>
 <td class="colLast">
 <div class="block">The Intersection family is an operation for the Theta Sketch Framework of sketches.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#KLL">KLL</a></span></code></th>
 <td class="colLast">
 <div class="block">KLL quantiles sketch</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#QUANTILES">QUANTILES</a></span></code></th>
 <td class="colLast">
 <div class="block">The Quantiles family of sketches.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#QUICKSELECT">QUICKSELECT</a></span></code></th>
 <td class="colLast">
 <div class="block">The QuickSelect Sketch family is a member of the Theta Sketch Framework of sketches and
@@ -247,22 +253,28 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
  off-heap operation.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#REQ">REQ</a></span></code></th>
 <td class="colLast">
 <div class="block">Relative Error Quantiles Sketch</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#RESERVOIR">RESERVOIR</a></span></code></th>
 <td class="colLast">
 <div class="block">The Reservoir family of sketches.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#RESERVOIR_UNION">RESERVOIR_UNION</a></span></code></th>
 <td class="colLast">
 <div class="block">The reservoir sampling family of Union operations.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#TDIGEST">TDIGEST</a></span></code></th>
+<td class="colLast">
+<div class="block">t-Digest for estimating quantiles and ranks</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -614,11 +626,31 @@ the order they are declared.</div>
 <a id="EBPPS">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>EBPPS</h4>
 <pre>public static final&nbsp;<a href="Family.html" title="enum in org.apache.datasketches.common">Family</a> EBPPS</pre>
 <div class="block">Exact and Bounded, Probability Proportional to Size (EBPPS)</div>
+</li>
+</ul>
+<a id="TDIGEST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TDIGEST</h4>
+<pre>public static final&nbsp;<a href="Family.html" title="enum in org.apache.datasketches.common">Family</a> TDIGEST</pre>
+<div class="block">t-Digest for estimating quantiles and ranks</div>
+</li>
+</ul>
+<a id="BLOOMFILTER">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>BLOOMFILTER</h4>
+<pre>public static final&nbsp;<a href="Family.html" title="enum in org.apache.datasketches.common">Family</a> BLOOMFILTER</pre>
+<div class="block">Bloom Filter</div>
 </li>
 </ul>
 </li>
